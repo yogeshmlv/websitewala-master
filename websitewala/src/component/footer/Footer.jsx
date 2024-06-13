@@ -16,6 +16,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import emailjs from '@emailjs/browser';
 import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Image from 'next/image';
 
 const Footer = () => {
 
@@ -44,7 +45,7 @@ const Footer = () => {
       .then((response) => {
         console.log('SUCCESS!', response.status, response.text);
         toast.success('Subscription successful!');
-        setEmail(''); 
+        setEmail('');
       }, (err) => {
         console.log('FAILED...', err);
         toast.error('Subscription failed. Please try again.');
@@ -57,10 +58,12 @@ const Footer = () => {
         <Grid container spacing={4}>
           <Grid item xs={12} md={6} lg={3}>
             <Box mb={2}>
-              <img
+              <Image
                 src="/gorakhpurlogo.png"
                 alt="website-wala-logo"
-                style={{ height: '80px', width: 'auto' }}
+                height={80}
+                width={80}
+                style={{ width: 'auto' }}
               />
             </Box>
             <Typography variant="body1" color="textSecondary" paragraph>

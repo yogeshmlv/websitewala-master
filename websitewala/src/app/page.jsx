@@ -25,12 +25,9 @@ const Home = () => {
             <button style={contactButtonStyles}>Contact</button>
           </Link>
         </div>
-        {/* <div className={styles.brands}>
-          <Image src="/brands.png" alt="" fill className={styles.brandImg} />
-        </div> */}
       </div>
       <div className={styles.imgContainer}>
-        <Image src="/hero9.gif" alt="" fill className={styles.heroImg} />
+        <Image src="/hero.gif" alt="" fill className={styles.heroImg} />
       </div>
     </div>
     </section>
@@ -56,7 +53,7 @@ const Home = () => {
 export default Home
 
 const contactButtonStyles = {
-  backgroundColor: 'white', // Same color as the default to prevent change
+  backgroundColor: 'white', 
   color: 'black',
   padding: '20px',
   minWidth:'120px',
