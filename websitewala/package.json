@@ -9,9 +9,24 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.1"
+    "@contentful/rich-text-react-renderer": "^15.21.2",
+    "@emailjs/browser": "^4.3.3",
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@fontsource/roboto": "^5.0.13",
+    "@mui/icons-material": "^5.15.19",
+    "@mui/material": "^5.15.20",
+    "contentful": "^10.11.7",
+    "emailjs": "^4.0.3",
+    "formik": "^2.4.6",
+    "mongoose": "^8.0.0",
+    "next": "^14.2.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "react-slick": "^0.30.2",
+    "react-toastify": "^10.0.5",
+    "slick-carousel": "^1.8.1",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "eslint": "^8",
