@@ -5,8 +5,8 @@ import Image from "next/image";
 import { documentToReactComponents } from '@contentful/rich-text-react-renderer';
 
 const client = createClient({
-  space: process.env.CONTENTFUL_SPACE_ID,
-  accessToken: process.env.CONTENTFUL_ACCESS_KEY,
+      space: 'h9ufuj4h46ir',
+      accessToken: '4nP7u4PUt9y6uCCaAOg1QSw5Hi8R4OOTVm1gNgbRZpA',
 });
 
 const fetchBlog = async (slug) => {
