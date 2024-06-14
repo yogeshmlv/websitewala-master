@@ -8,6 +8,7 @@ import { toast } from "react-toastify";
 import { useState } from "react";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { Container, Typography, Box} from '@mui/material';
 
 const ContactPage = () => {
   const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
@@ -45,6 +46,10 @@ const ContactPage = () => {
   
 
   return (
+    <>
+    <Typography variant="h3" component="h1" gutterBottom sx={{ mt: '36px',mb:'44px'}}>
+       Contact <span style={{ color: '#6dc396' }}>Us</span>
+    </Typography>
     <div className={styles.container} style={{marginBottom:'44px'}}>
       <div className={styles.imgContainer}>
         <Image src="/contact.png" alt="Contact" fill className={styles.img} />
@@ -104,6 +109,7 @@ const ContactPage = () => {
       </div>
       <ToastContainer /> {/* This is where the toast messages will be displayed */}
     </div>
+    </>
   );
 };
 

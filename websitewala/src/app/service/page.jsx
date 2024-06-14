@@ -3,6 +3,7 @@ import { createClient } from "contentful";
 import styles from "./service.module.css";
 import ServiceCard from "@/component/serviceCard/serviceCard";
 import { useState,useEffect } from "react";
+import { Container, Typography, Box} from '@mui/material';
 
 // Async function to fetch data from Contentful
 const fetchServices = async () => {
@@ -33,6 +34,10 @@ const ServicePage = ({ limit = 1000 }) => {
   }, []);
 
   return (
+    <>
+    <Typography variant="h3" component="h1" gutterBottom sx={{ mt: '36px',mb:'44px'}}>
+       Our <span style={{ color: '#6dc396' }}>Services</span>
+    </Typography>
     <div className={styles.container} style={{marginBottom:'24px'}}>
       {services.slice(0, limit).map((service, index) => (
         <div className={styles.post} key={index}>
@@ -40,6 +45,7 @@ const ServicePage = ({ limit = 1000 }) => {
         </div>
       ))}
     </div>
+    </>
   );
 };
 
