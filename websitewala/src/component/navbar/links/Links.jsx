@@ -37,26 +37,31 @@ const isAdmin = false;
 const Link = () => {
     const [open, setOpen] = useState(false);
 
+    const handleLinkClick = () => {
+        window.scrollTo(0, 0);
+        setOpen(false);
+    };
+
     return (
         <div className={styles.container}>
             <div className={styles.links}>
                 {links.map(link => (
-                    <NavLink item={link} key={link.title} />
+                    <NavLink item={link} key={link.title} onClick={handleLinkClick}/>
                 ))}
                 {session ? (
                     <>
-                        {isAdmin && <NavLink item={{ title: "Admin", path: "/admin" }} />}
+                        {isAdmin && <NavLink item={{ title: "Admin", path: "/admin" }}onClick={handleLinkClick} />}
                         {/* <button className={styles.Logout}>Logout</button> */}
                     </>
                 ) : (
-                    <NavLink item={{ title: "Login", path: "/login" }} />
+                    <NavLink item={{ title: "Login", path: "/login" }}onClick={handleLinkClick} />
                 )}
             </div>
             <Image className={styles.menuButton} src ="/menu.png" alt="" width={30} height={30}  onClick={() => setOpen(!open)}/>
             {open && (
                 <div className={styles.mobileLinks}>
                     {links.map(link => (
-                        <NavLink item={link} key={link.title} />
+                        <NavLink item={link} key={link.title}onClick={handleLinkClick} />
                     ))}
                 </div>
             )}
