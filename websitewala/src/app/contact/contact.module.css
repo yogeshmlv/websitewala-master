@@ -31,7 +31,7 @@
     border: none;
     outline: none;
     background-color: #d3d3d3;
-    color: var(--text);
+    /* color: var(--text); */
   }
   
   .form button {
