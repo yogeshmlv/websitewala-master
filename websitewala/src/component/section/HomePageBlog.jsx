@@ -12,11 +12,11 @@ const HomePageWhatDo = () => {
 
   return (
     <Container maxWidth="xl" sx={{ py: 4,pb:'54px'}}>
-      <Box>
+      {/* <Box>
         <Typography variant="h3" component="h1" gutterBottom sx={{ mt: '36px',mb:'44px' , textAlign:'center'}}>
              Our  <span style={{ color: '#6dc396' }}>Blog Content</span>
             </Typography>
-      </Box>
+      </Box> */}
       <BlogPage limit={3} />
       <Box>
         <Typography variant="h6" component="h1" gutterBottom sx={{textAlign:'center',fontSize:'14px'}}>

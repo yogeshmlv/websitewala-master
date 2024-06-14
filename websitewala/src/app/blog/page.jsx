@@ -18,8 +18,8 @@ const BlogPage = async ({ limit = 1000 }) => {
 
   return (
     <>
-    <Typography variant="h3" component="h1" gutterBottom sx={{ mt: '36px',mb:'44px'}}>
-       Our <span style={{ color: '#6dc396' }}>Blogs</span>
+    <Typography variant="h3" component="h1" gutterBottom sx={{ mt: '36px',mb:'44px',textAlign:'center'}}>
+       Our <span style={{ color: '#6dc396' }}>Blog Content</span>
     </Typography>
     <div className={styles.container} style={{marginBottom:'54px'}}>
       {blogs.slice(0, limit).map((blog, index) => (

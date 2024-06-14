@@ -35,8 +35,8 @@ const ServicePage = ({ limit = 1000 }) => {
 
   return (
     <>
-    <Typography variant="h3" component="h1" gutterBottom sx={{ mt: '36px',mb:'44px'}}>
-       Our <span style={{ color: '#6dc396' }}>Services</span>
+    <Typography variant="h3" component="h1" gutterBottom sx={{ mt: '36px',mb:'44px', textAlign:'center'}}>
+       What <span style={{ color: '#6dc396' }}>We Do</span>
     </Typography>
     <div className={styles.container} style={{marginBottom:'24px'}}>
       {services.slice(0, limit).map((service, index) => (

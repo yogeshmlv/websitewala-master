@@ -47,7 +47,7 @@ const ContactPage = () => {
 
   return (
     <>
-    <Typography variant="h3" component="h1" gutterBottom sx={{ mt: '36px',mb:'44px'}}>
+    <Typography variant="h3" component="h1" gutterBottom sx={{ mt: '36px',mb:'44px',textAlign:'center'}}>
        Contact <span style={{ color: '#6dc396' }}>Us</span>
     </Typography>
     <div className={styles.container} style={{marginBottom:'44px'}}>
