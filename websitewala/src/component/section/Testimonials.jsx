@@ -7,9 +7,8 @@ import "slick-carousel/slick/slick-theme.css";
 import { createClient } from "contentful";
 import { useState, useEffect } from "react";
 
-const Testimonials = () => {
+const Testimonials = async () => {
 
-  const [testimonials, setTestimonials] = useState([]);
   const fetchTestimonials = async () => {
       try {
         const client = createClient({
@@ -25,13 +24,7 @@ const Testimonials = () => {
       }
     };
 
-  useEffect(() => {
-    const getTestimonials = async () => {
-      const fetchedTestimonials = await fetchTestimonials();
-      setTestimonials(fetchedTestimonials);
-    };
-    getTestimonials();
-  }, []);
+    const testimonials = await fetchTestimonials();
 
   const settings = {
     dots: true,

@@ -21,17 +21,8 @@ const fetchServices = async () => {
   }
 };
 
-const ServicePage = ({ limit = 1000 }) => {
-  const [services, setServices] = useState([]);
-
-  useEffect(() => {
-    const getServices = async () => {
-      const fetchedServices = await fetchServices();
-      setServices(fetchedServices);
-    };
-
-    getServices();
-  }, []);
+const ServicePage = async ({ limit = 1000 }) => {
+  const services = await fetchServices();
 
   return (
     <>
