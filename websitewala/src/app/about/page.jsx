@@ -9,7 +9,6 @@ export const metadata = {
 
 const AboutPage = () => {
 
-  // console.log("lets check where it works")
   return (
     <div className={styles.container} style={{marginBottom:'56px'}}>
       <div className={styles.textContainer}>
@@ -43,7 +42,8 @@ const AboutPage = () => {
         <Image
           src="/about.png"
           alt="About Image"
-          fill
+          objectFit="cover"
+          layout="fill"
           className={styles.img}
         />
       </div>

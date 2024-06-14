@@ -67,10 +67,13 @@
   
   @media (max-width: 768px) {
     .title {
-      font-size: 32px;
+      font-size: 30px;
     }
   
     .brands{
       width: 100%;
+    }
+    .desc{
+      font-size: 16px;
     }
   }

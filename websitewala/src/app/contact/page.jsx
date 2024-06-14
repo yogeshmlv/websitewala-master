@@ -52,7 +52,7 @@ const ContactPage = () => {
     </Typography>
     <div className={styles.container} style={{marginBottom:'44px'}}>
       <div className={styles.imgContainer}>
-        <Image src="/contact.png" alt="Contact" fill className={styles.img} />
+        <Image src="/contact.png" alt="Contact" fill className={styles.img} objectFit="cover" layout="fill" />
       </div>
       <div className={styles.formContainer}>
         <form onSubmit={formik.handleSubmit} className={styles.form}>

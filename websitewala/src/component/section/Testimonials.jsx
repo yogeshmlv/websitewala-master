@@ -5,7 +5,6 @@ import Slider from "react-slick";
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 import { createClient } from "contentful";
-import { useState, useEffect } from "react";
 
 const Testimonials = async () => {
 
