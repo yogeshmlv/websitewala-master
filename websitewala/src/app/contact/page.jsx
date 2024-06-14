@@ -11,9 +11,9 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Container, Typography, Box} from '@mui/material';
 
 const ContactPage = () => {
-  const SERVICE_ID = process.env.NEXT_PUBLIC_EMAILJS_SERVICE_ID;
-  const TEMPLATE_ID = process.env.NEXT_PUBLIC_EMAILJS_TEMPLATE_ID;
-  const USER_ID = process.env.NEXT_PUBLIC_EMAILJS_USER_ID;
+  const SERVICE_ID = 'service_jw03mwb';
+  const TEMPLATE_ID = 'template_6jkyl8j';
+  const USER_ID = 'X67rapP6KGE6p8OyU';
   const [isSubmitting, setIsSubmitting] = useState(false);
 
   const formik = useFormik({
