@@ -1,0 +1,58 @@
+[
+  {
+      "id": "1",
+      "image": "/image3.jpg",
+      "category": "Branding",
+      "linkUrl": "https://deskohome.com/",
+      "title": "DeskoHome",
+      "description": "On this website, we have crafted seamless responsiveness and captivating frontend functionalities."
+  },
+  {
+      "id": "2",
+      "category": "UI UX Design",
+      "image": "/image6.jpg",
+      "linkUrl": "https://scholarshipkart.com/",
+      "title": "Scholarshipkart",
+      "description": "We developed the website's UI, functionalities, and ensured responsiveness using Bootstrap, jQuery, and HTML."
+  },
+  {
+      "id": "3",
+      "category": "Development",
+      "image": "/image4.jpg",
+      "linkUrl": "https://woodmart.xtemos.com/demo-retail/demo/retail/",
+      "title": "WoodMart",
+      "description": "On this website, we leveraged React and built a custom Bootstrap design from scratch, enhancing it with Redux for a captivating user experience."
+  },
+  {
+      "id": "4",
+      "category": "Development",
+      "image": "/image1.jpg",
+      "linkUrl": "https://mui-test-8mob-git-main-yttmlvgmailcoms-projects.vercel.app/dashboard",
+      "title": "Admin MUI",
+      "description": "In this project, we leveraged React.js and Material-UI (MUI) to develop a powerful admin panel. The use of React provided us with a component-based architecture."
+  },
+  {
+      "id": "5",
+      "category": "Development",
+      "image": "/image5.jpg",
+      "linkUrl": "https://www.homeopathy360.com/",
+      "title": "AudeSapere",
+      "description": "We built this website from scratch using React and Bootstrap, integrated Firebase for data handling, and employed EMAILJS for email functionality."
+  },
+  {
+      "id": "6",
+      "category": "Development",
+      "image": "/image7.jpg",
+      "linkUrl": "https://sainikcarrentals.com/",
+      "title": "Tour And Travels",
+      "description": "This website was crafted using React, HTML, CSS, and Email.js. Additionally, it incorporates WhatsApp Business for chat integration."
+  },
+  {
+      "id": "7",
+      "category": "Development",
+      "image": "/image2.jpg",
+      "linkUrl": "https://yogeshdev.com/",
+      "title": "Portfolio",
+      "description": "This website was crafted using React, HTML, CSS, and Email.js. Additionally, it incorporates WhatsApp Business for chat integration."
+  }
+]

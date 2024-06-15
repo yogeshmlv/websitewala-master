@@ -6,6 +6,7 @@ import HomePageContact from "@/component/section/HomePageContact";
 import HomePageWhatDo from "@/component/section/HomePageWhatDo";
 import Testimonials from "@/component/section/Testimonials";
 import HomePageBlog from "@/component/section/HomePageBlog";
+import HomePageWork from "@/component/section/HomePageWork";
 
 const Home = () => {
   return (
@@ -43,6 +44,9 @@ const Home = () => {
       </section>
       <section className={styles.sectionWho}>
         <HomePageBlog/>
+      </section>
+      <section className={styles.sectionWho}>
+        <HomePageWork/>
       </section>
     </>
   );

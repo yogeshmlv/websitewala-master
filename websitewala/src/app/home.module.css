@@ -17,11 +17,11 @@
   
   .title{
     margin-top: 24px;
-    font-size: 44px;
+    font-size: 34px;
   }
   
   .desc{
-    font-size: 20px;
+    font-size: 16px;
   }
   
   .buttons{
@@ -93,10 +93,10 @@
 @media screen and (max-width: 1400px) {
   .title{
     margin-top: 0px;
-    font-size: 24px;
+    font-size: 20px;
   }
   .desc{
-    font-size: 16px;
+    font-size: 15px;
   }
   .container {
     display: flex;
