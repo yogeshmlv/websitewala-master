@@ -1,6 +1,10 @@
 .container {
     display: flex;
     gap: 100px;
+    margin-top: 50px;
+  }
+  .heroImg {
+    position :static !important;
   }
   
   .textContainer {
@@ -8,6 +12,7 @@
     display: flex;
     flex-direction: column;
     gap: 50px;
+    margin-top: 50px;
   }
   
   .title{
@@ -51,7 +56,7 @@
   
   .imgContainer {
     flex: 1;
-    position: relative;
+    /* position: relative; */
   }
   
   @media (max-width: 1024px) {
@@ -69,6 +74,13 @@
     .title {
       font-size: 30px;
     }
+    .textContainer {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      margin-top: 50px;
+    }
   
     .brands{
       width: 100%;
@@ -81,7 +93,15 @@
 @media screen and (max-width: 1400px) {
   .title{
     margin-top: 0px;
-    font-size: 28px;
+    font-size: 24px;
+  }
+  .desc{
+    font-size: 16px;
+  }
+  .container {
+    display: flex;
+    gap: 100px;
+    margin-top: 70px;
   }
 
 }
