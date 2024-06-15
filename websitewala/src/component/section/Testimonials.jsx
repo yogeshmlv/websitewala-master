@@ -1,10 +1,11 @@
 'use client'
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Typography, Box, Card, CardContent, CardHeader, Avatar } from '@mui/material';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { createClient } from "contentful";
+import { BallTriangle } from 'react-loader-spinner';
 
 const fetchTestimonials = async () => {
   try {
@@ -22,7 +23,16 @@ const fetchTestimonials = async () => {
 };
 
 const Testimonials = async () => {
-  const testimonials = await fetchTestimonials();
+  const [testimonials, setTestimonials] = useState();
+  const [loading, setLaoding] = useState(false);
+
+  useEffect(() => {
+    setLaoding(true)
+    fetchTestimonials().then((res) => {
+      setTestimonials(res)
+      setLaoding(false)
+    })
+  }, [])
 
   const settings = {
     dots: true,
@@ -59,34 +69,46 @@ const Testimonials = async () => {
         </Typography>
       </Box>
       <Box>
-        <Slider {...settings} style={{ margin: "12px" }}>
-          {testimonials.map((testimonial, index) => (
-            <Box key={`${testimonial.id}-${index}`} sx={{ px: '6px' }}>
-              <Card sx={{ textAlign: 'center', minHeight: '310px', backgroundColor: '#14132b', color: 'white' }}>
-                <CardContent sx={{ minHeight: '200px' }}>
-                  <Typography variant="body1" component="p" gutterBottom sx={{ color: 'white' }}>
-                    {testimonial.fields.content.content[0].content[0].value}
-                  </Typography>
-                </CardContent>
-                <CardHeader
-                  avatar={
-                    <Avatar alt={testimonial.fields} src={'https:' + testimonial.fields.avatar.fields.file.url} />
-                  }
-                  title={
-                    <Typography sx={{ color: 'white' }}>
-                      {testimonial.fields.username}
+        {testimonials?.length > 0 ?
+          <Slider {...settings} style={{ margin: "12px" }}>
+            {testimonials.map((testimonial, index) => (
+              <Box key={`${testimonial.id}-${index}`} sx={{ px: '6px' }}>
+                <Card sx={{ textAlign: 'center', minHeight: '310px', backgroundColor: '#14132b', color: 'white' }}>
+                  <CardContent sx={{ minHeight: '200px' }}>
+                    <Typography variant="body1" component="p" gutterBottom sx={{ color: 'white' }}>
+                      {testimonial.fields.content.content[0].content[0].value}
                     </Typography>
-                  }
-                  subheader={
-                    <Typography variant="body2" color='#6dc396'>
-                      {testimonial.fields.designation}
-                    </Typography>
-                  }
-                />
-              </Card>
-            </Box>
-          ))}
-        </Slider>
+                  </CardContent>
+                  <CardHeader
+                    avatar={
+                      <Avatar alt={testimonial.fields} src={'https:' + testimonial.fields.avatar.fields.file.url} />
+                    }
+                    title={
+                      <Typography sx={{ color: 'white' }}>
+                        {testimonial.fields.username}
+                      </Typography>
+                    }
+                    subheader={
+                      <Typography variant="body2" color='#6dc396'>
+                        {testimonial.fields.designation}
+                      </Typography>
+                    }
+                  />
+                </Card>
+              </Box>
+            ))}
+          </Slider> : <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '200px' }}>
+            <BallTriangle
+              height={100}
+              width={100}
+              radius={5}
+              color="#4fa94d"
+              ariaLabel="ball-triangle-loading"
+              wrapperStyle={{}}
+              wrapperClass=""
+              visible={true}
+            />
+          </div>}
       </Box>
     </Container>
   );

@@ -17,11 +17,6 @@ const fetchServices = async (slug) => {
   return items[0];
 };
 
-export async function generateStaticParams() {
-  const res = await client.getEntries({ content_type: 'services' });
-  return res.items.map(item => ({ slug: item.fields.slug }));
-}
-
 const SinglePostPage = async ({ params }) => {
   const services = await fetchServices(params.slug);
 
