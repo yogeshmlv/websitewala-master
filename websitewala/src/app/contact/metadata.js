@@ -35,6 +35,9 @@ export const metadata = {
     "Uttar Pradesh digital marketing",
     "Uttar Pradesh marketing consultation",
     "Uttar Pradesh domain hosting",
-    "Uttar Pradesh e-commerce"
+    "Uttar Pradesh e-commerce",
+    "websitewala in Gorakhpur",
+    'websitewala in up',
+    'websitewala',
   ],
 };
