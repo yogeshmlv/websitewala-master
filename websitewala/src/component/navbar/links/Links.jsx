@@ -36,11 +36,14 @@ const isAdmin = false;
 
 const Link = () => {
     const [open, setOpen] = useState(false);
-
+    
     const handleLinkClick = () => {
-        window.scrollTo(0, 0);
+        if (typeof window !== 'undefined') {
+            window.scrollTo(0, 0);
+        }
         setOpen(false);
     };
+    
 
     return (
         <div className={styles.container}>

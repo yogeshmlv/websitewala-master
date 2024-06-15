@@ -1,10 +1,10 @@
 import { Prompt } from "next/font/google";
-import Head from "next/head"; // Import Head from next/head
-import Script from 'next/script'; // Import Script from next/script
+import Head from "next/head";
+import Script from 'next/script';
 import "./globals.css";
 import Navbar from "@/component/navbar/Navbar";
 import Footer from "@/component/footer/Footer";
-import { metadata } from "./contact/metadata"; // Import metadata from ContactPage
+import { metadata } from "./contact/metadata";
 
 const prompt = Prompt({ weight: '200', subsets: ["latin"] });
 
@@ -14,6 +14,8 @@ export default function RootLayout({ children }) {
       <Head>
         <title>{metadata.title}</title>
         <meta name="description" content={metadata.description} />
+        <meta name="keywords" content={metadata.keywords.join(', ')} />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
       </Head>
       <body className={prompt.className}>
         <div className="container">

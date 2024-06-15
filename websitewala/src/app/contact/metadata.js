@@ -1,6 +1,40 @@
 // ./src/app/contact/metadata.js
+
 export const metadata = {
-    title: "Contact Page",
-    description: "Contact description",
-  };
-  
+  title: "Top Website and App Development Services in Gorakhpur, Peepalganj, Pipiganj, Uttar Pradesh",
+  description: "Welcome to Gorakhpur Website Wala! We specialize in website development, app development, website maintenance, SEO, digital marketing, marketing consultation, domain hosting, and e-commerce services in Gorakhpur, Peepalganj, Pipiganj, and across Uttar Pradesh.",
+  keywords: [
+    "website development Gorakhpur",
+    "app development Gorakhpur",
+    "website maintenance Gorakhpur",
+    "SEO Gorakhpur",
+    "digital marketing Gorakhpur",
+    "marketing consultation Gorakhpur",
+    "domain hosting Gorakhpur",
+    "e-commerce Gorakhpur",
+    "website development Peepalganj",
+    "app development Peepalganj",
+    "website maintenance Peepalganj",
+    "SEO Peepalganj",
+    "digital marketing Peepalganj",
+    "marketing consultation Peepalganj",
+    "domain hosting Peepalganj",
+    "e-commerce Peepalganj",
+    "website development Pipiganj",
+    "app development Pipiganj",
+    "website maintenance Pipiganj",
+    "SEO Pipiganj",
+    "digital marketing Pipiganj",
+    "marketing consultation Pipiganj",
+    "domain hosting Pipiganj",
+    "e-commerce Pipiganj",
+    "Uttar Pradesh website development",
+    "Uttar Pradesh app development",
+    "Uttar Pradesh website maintenance",
+    "Uttar Pradesh SEO",
+    "Uttar Pradesh digital marketing",
+    "Uttar Pradesh marketing consultation",
+    "Uttar Pradesh domain hosting",
+    "Uttar Pradesh e-commerce"
+  ],
+};
