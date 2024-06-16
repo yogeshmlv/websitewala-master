@@ -61,7 +61,7 @@ const ContactPage = () => {
       <Box>
         <Grid container spacing={4}>
           <Grid item xs={12} md={12}>
-            <Typography variant="h4" component="h1" gutterBottom sx={{ textAlign: 'center' }}>
+            <Typography variant="h5" component="h1" gutterBottom sx={{ textAlign: 'center',mb:'36px' }}>
               Our Contact <span style={{ color: '#6dc396' }}>Information</span>
             </Typography>
             <Box
@@ -72,7 +72,7 @@ const ContactPage = () => {
                 flexWrap: 'wrap' 
               }}
             >
-              <Card sx={{minWidth: 345,backgroundColor:"#d3d3d3" }}>
+              <Card sx={{minWidth: 310,backgroundColor:"#d3d3d3" }}>
                 <CardActionArea>
                   <Box sx={{ display: 'flex', justifyContent: 'center',alignItems: 'center', py: 2 }}>
                     <PhoneIcon sx={{ fontSize: 40, color: '#6dc396' }} />
@@ -88,7 +88,7 @@ const ContactPage = () => {
                   </CardContent>
                 </CardActionArea>
               </Card>
-              <Card sx={{ minWidth: 345,backgroundColor:"#d3d3d3" }}>
+              <Card sx={{ minWidth: 310,backgroundColor:"#d3d3d3" }}>
                 <CardActionArea>
                   <Box sx={{ display: 'flex', justifyContent: 'center',alignItems: 'center', py: 2 }}>
                     <EmailIcon sx={{ fontSize: 40, color: '#6dc396' }} />
@@ -103,7 +103,7 @@ const ContactPage = () => {
                   </CardContent>
                 </CardActionArea>
               </Card>
-              <Card sx={{ minWidth: 345,backgroundColor:"#d3d3d3" }}>
+              <Card sx={{ minWidth: 310,backgroundColor:"#d3d3d3" }}>
                 <CardActionArea>
                   <Box sx={{ display: 'flex', justifyContent: 'center',alignItems: 'center', py: 2 }}>
                     <LocationOnIcon sx={{ fontSize: 40, color: '#6dc396' }} />
