@@ -124,8 +124,8 @@ const ContactPage = () => {
       </Box>
     </Container>
     <Typography variant="h4" component="h1" gutterBottom sx={{ mt: '36px', mb: '24px', textAlign: 'center',paddingLeft: { xs: '0px', lg: '450px' } }}>
-        Let's <span style={{ color: '#6dc396' }}>Talk</span>
-      </Typography>
+           Let&apos;s <span style={{ color: '#6dc396' }}>Talk</span>
+    </Typography>
       <div className={styles.container} style={{ marginBottom: '44px' }}>
         <div className={styles.imgContainer}>
           <Image src="/contact.png" alt="Contact" fill className={styles.img} objectFit="cover" layout="fill" />
