@@ -67,9 +67,9 @@ const ContactPage = () => {
             <Box
               sx={{
                 display: 'flex',
-                justifyContent: 'center', // Center the cards horizontally
-                gap: '12px', // Gap between the cards
-                flexWrap: 'wrap' // This will wrap cards to the next row if they overflow the container width
+                justifyContent: 'center', 
+                gap: '12px', 
+                flexWrap: 'wrap' 
               }}
             >
               <Card sx={{minWidth: 345,backgroundColor:"#d3d3d3" }}>
@@ -82,7 +82,7 @@ const ContactPage = () => {
                       Phone
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      (+91) 83185611551, 
+                      (+91) 83185611551  
                       9115036388.
                     </Typography>
                   </CardContent>
@@ -98,7 +98,7 @@ const ContactPage = () => {
                       Email
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      support@gorakhpurwebsitewala.com.
+                      support@gorakhpurwebsitewala.com
                     </Typography>
                   </CardContent>
                 </CardActionArea>
