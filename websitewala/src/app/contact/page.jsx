@@ -72,7 +72,7 @@ const ContactPage = () => {
                 flexWrap: 'wrap' // This will wrap cards to the next row if they overflow the container width
               }}
             >
-              <Card sx={{minWidth:'345px', minHeight:'220px', backgroundColor:"#d3d3d3" }}>
+              <Card sx={{minWidth: 345,backgroundColor:"#d3d3d3" }}>
                 <CardActionArea>
                   <Box sx={{ display: 'flex', justifyContent: 'center',alignItems: 'center', py: 2 }}>
                     <PhoneIcon sx={{ fontSize: 40, color: '#6dc396' }} />
@@ -82,13 +82,13 @@ const ContactPage = () => {
                       Phone
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      You can reach us at <br/>(+91) 83185611551, 
-                      (+91) 9115036388.
+                      (+91) 83185611551, 
+                      9115036388.
                     </Typography>
                   </CardContent>
                 </CardActionArea>
               </Card>
-              <Card sx={{ maxWidth: 345,backgroundColor:"#d3d3d3" }}>
+              <Card sx={{ minWidth: 345,backgroundColor:"#d3d3d3" }}>
                 <CardActionArea>
                   <Box sx={{ display: 'flex', justifyContent: 'center',alignItems: 'center', py: 2 }}>
                     <EmailIcon sx={{ fontSize: 40, color: '#6dc396' }} />
@@ -98,12 +98,12 @@ const ContactPage = () => {
                       Email
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      Send us an email at support@gorakhpurwebsitewala.com.
+                      support@gorakhpurwebsitewala.com.
                     </Typography>
                   </CardContent>
                 </CardActionArea>
               </Card>
-              <Card sx={{ maxWidth: 345,backgroundColor:"#d3d3d3" }}>
+              <Card sx={{ minWidth: 345,backgroundColor:"#d3d3d3" }}>
                 <CardActionArea>
                   <Box sx={{ display: 'flex', justifyContent: 'center',alignItems: 'center', py: 2 }}>
                     <LocationOnIcon sx={{ fontSize: 40, color: '#6dc396' }} />
@@ -113,7 +113,7 @@ const ContactPage = () => {
                       Address
                     </Typography>
                     <Typography variant="body2" color="text.secondary">
-                      Visit us at  <br/> Singh Sadan, Peppeganj, Gorakhpur, Uttar Pradesh (India).
+                      Peppeganj, Gorakhpur, Uttar Pradesh (India).
                     </Typography>
                   </CardContent>
                 </CardActionArea>
@@ -123,6 +123,9 @@ const ContactPage = () => {
         </Grid>
       </Box>
     </Container>
+    <Typography variant="h4" component="h1" gutterBottom sx={{ mt: '36px', mb: '24px', textAlign: 'center',paddingLeft: { xs: '0px', lg: '450px' } }}>
+        Let's <span style={{ color: '#6dc396' }}>Talk</span>
+      </Typography>
       <div className={styles.container} style={{ marginBottom: '44px' }}>
         <div className={styles.imgContainer}>
           <Image src="/contact.png" alt="Contact" fill className={styles.img} objectFit="cover" layout="fill" />

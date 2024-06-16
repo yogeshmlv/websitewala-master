@@ -20,7 +20,7 @@ const Home = () => {
             </p>
             <div className={styles.buttons}>
               <Link href='/about'><button className={styles.button}>Learn More</button></Link>
-              <Link href="/contact">
+              <Link href="https://wa.link/br0lsr" target="_blank" rel="noopener noreferrer">
                 <button style={contactButtonStyles}>Contact</button>
               </Link>
             </div>
