@@ -8,7 +8,14 @@ import { toast } from "react-toastify";
 import { useState } from "react";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { Container, Typography, Box} from '@mui/material';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import CardMedia from '@mui/material/CardMedia';
+import { CardActionArea } from '@mui/material';
+import { Container, Typography, Box, Grid } from '@mui/material';
+import PhoneIcon from '@mui/icons-material/Phone';
+import EmailIcon from '@mui/icons-material/Email';
+import LocationOnIcon from '@mui/icons-material/LocationOn';
 
 const ContactPage = () => {
   const SERVICE_ID = 'service_jw03mwb';
@@ -43,72 +50,138 @@ const ContactPage = () => {
       }
     },
   });
-  
+
 
   return (
     <>
-    <Typography variant="h3" component="h1" gutterBottom sx={{ mt: '36px',mb:'44px',textAlign:'center'}}>
-       Contact <span style={{ color: '#6dc396' }}>Us</span>
-    </Typography>
-    <div className={styles.container} style={{marginBottom:'44px'}}>
-      <div className={styles.imgContainer}>
-        <Image src="/contact.png" alt="Contact" fill className={styles.img} objectFit="cover" layout="fill" />
+      <Typography variant="h3" component="h1" gutterBottom sx={{ mt: '36px', mb: '44px', textAlign: 'center' }}>
+        Contact <span style={{ color: '#6dc396' }}>Us</span>
+      </Typography>
+      <Container maxWidth="xl" sx={{ backgroundColor: '#345663', borderRadius: '20px', py: 4, pb: '54px', marginBottom: '32px' }}>
+      <Box>
+        <Grid container spacing={4}>
+          <Grid item xs={12} md={12}>
+            <Typography variant="h4" component="h1" gutterBottom sx={{ textAlign: 'center' }}>
+              Our Contact <span style={{ color: '#6dc396' }}>Information</span>
+            </Typography>
+            <Box
+              sx={{
+                display: 'flex',
+                justifyContent: 'center', // Center the cards horizontally
+                gap: '12px', // Gap between the cards
+                flexWrap: 'wrap' // This will wrap cards to the next row if they overflow the container width
+              }}
+            >
+              <Card sx={{minWidth:'345px', minHeight:'220px', backgroundColor:"#d3d3d3" }}>
+                <CardActionArea>
+                  <Box sx={{ display: 'flex', justifyContent: 'center',alignItems: 'center', py: 2 }}>
+                    <PhoneIcon sx={{ fontSize: 40, color: '#6dc396' }} />
+                  </Box>
+                  <CardContent sx={{padding:'24px',textAlign:'center'}}>
+                    <Typography gutterBottom variant="h5" component="div" sx={{color: '#6dc396',fontWeight:'700' }}>
+                      Phone
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      You can reach us at <br/>(+91) 83185611551, 
+                      (+91) 9115036388.
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+              <Card sx={{ maxWidth: 345,backgroundColor:"#d3d3d3" }}>
+                <CardActionArea>
+                  <Box sx={{ display: 'flex', justifyContent: 'center',alignItems: 'center', py: 2 }}>
+                    <EmailIcon sx={{ fontSize: 40, color: '#6dc396' }} />
+                  </Box>
+                  <CardContent sx={{padding:'24px',textAlign:'center'}}>
+                    <Typography gutterBottom variant="h5" component="div" sx={{color: '#6dc396',fontWeight:'700' }}>
+                      Email
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      Send us an email at support@gorakhpurwebsitewala.com.
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+              <Card sx={{ maxWidth: 345,backgroundColor:"#d3d3d3" }}>
+                <CardActionArea>
+                  <Box sx={{ display: 'flex', justifyContent: 'center',alignItems: 'center', py: 2 }}>
+                    <LocationOnIcon sx={{ fontSize: 40, color: '#6dc396' }} />
+                  </Box>
+                  <CardContent sx={{padding:'24px',textAlign:'center'}}>
+                    <Typography gutterBottom variant="h5" component="div" sx={{color: '#6dc396',fontWeight:'700' }} >
+                      Address
+                    </Typography>
+                    <Typography variant="body2" color="text.secondary">
+                      Visit us at  <br/> Singh Sadan, Peppeganj, Gorakhpur, Uttar Pradesh (India).
+                    </Typography>
+                  </CardContent>
+                </CardActionArea>
+              </Card>
+            </Box>
+          </Grid>
+        </Grid>
+      </Box>
+    </Container>
+      <div className={styles.container} style={{ marginBottom: '44px' }}>
+        <div className={styles.imgContainer}>
+          <Image src="/contact.png" alt="Contact" fill className={styles.img} objectFit="cover" layout="fill" />
+        </div>
+        <div className={styles.formContainer}>
+          <form onSubmit={formik.handleSubmit} className={styles.form}>
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter Your Name"
+              value={formik.values.name}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {formik.touched.name && formik.errors.name ? (
+              <div className={styles.error}>{formik.errors.name}</div>
+            ) : null}
+
+            <input
+              type="text"
+              name="email"
+              placeholder="Enter Email Address"
+              value={formik.values.email}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+            {formik.touched.email && formik.errors.email ? (
+              <div className={styles.error}>{formik.errors.email}</div>
+            ) : null}
+
+            <input
+              type="text"
+              name="phone"
+              placeholder="Enter Phone Number (Optionally)"
+              value={formik.values.phone}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            />
+
+            <textarea
+              name="message"
+              cols="30"
+              rows="10"
+              placeholder="Enter Custom Message"
+              value={formik.values.message}
+              onChange={formik.handleChange}
+              onBlur={formik.handleBlur}
+            ></textarea>
+            {formik.touched.message && formik.errors.message ? (
+              <div className={styles.error}>{formik.errors.message}</div>
+            ) : null}
+
+            <button type="submit" disabled={isSubmitting}>
+              {isSubmitting ? "Sending..." : "Send"}
+            </button>
+          </form>
+        </div>
+        <ToastContainer /> {/* This is where the toast messages will be displayed */}
       </div>
-      <div className={styles.formContainer}>
-        <form onSubmit={formik.handleSubmit} className={styles.form}>
-          <input
-            type="text"
-            name="name"
-            placeholder="Enter Your Name"
-            value={formik.values.name}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
-          {formik.touched.name && formik.errors.name ? (
-            <div className={styles.error}>{formik.errors.name}</div>
-          ) : null}
-
-          <input
-            type="text"
-            name="email"
-            placeholder="Enter Email Address"
-            value={formik.values.email}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
-          {formik.touched.email && formik.errors.email ? (
-            <div className={styles.error}>{formik.errors.email}</div>
-          ) : null}
-
-          <input
-            type="text"
-            name="phone"
-            placeholder="Enter Phone Number (Optionally)"
-            value={formik.values.phone}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          />
-
-          <textarea
-            name="message"
-            cols="30"
-            rows="10"
-            placeholder="Enter Custom Message"
-            value={formik.values.message}
-            onChange={formik.handleChange}
-            onBlur={formik.handleBlur}
-          ></textarea>
-          {formik.touched.message && formik.errors.message ? (
-            <div className={styles.error}>{formik.errors.message}</div>
-          ) : null}
-
-          <button type="submit" disabled={isSubmitting}>
-            {isSubmitting ? "Sending..." : "Send"}
-          </button>
-        </form>
-      </div>
-      <ToastContainer /> {/* This is where the toast messages will be displayed */}
-    </div>
     </>
   );
 };
