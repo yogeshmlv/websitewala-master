@@ -73,6 +73,7 @@ const ContactPage = () => {
               }}
             >
               <Card sx={{minWidth: 310,backgroundColor:"#d3d3d3" }}>
+              <a href="tel:+919115036388" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                 <CardActionArea>
                   <Box sx={{ display: 'flex', justifyContent: 'center',alignItems: 'center', py: 2 }}>
                     <PhoneIcon sx={{ fontSize: 40, color: '#6dc396' }} />
@@ -87,8 +88,10 @@ const ContactPage = () => {
                     </Typography>
                   </CardContent>
                 </CardActionArea>
+                </a>
               </Card>
               <Card sx={{ minWidth: 310,backgroundColor:"#d3d3d3" }}>
+              <a href="mailto:support@gorakhpurwebsitewala.com"target="_blank" rel="noopener noreferrer"  style={{ textDecoration: 'none' }}>
                 <CardActionArea>
                   <Box sx={{ display: 'flex', justifyContent: 'center',alignItems: 'center', py: 2 }}>
                     <EmailIcon sx={{ fontSize: 40, color: '#6dc396' }} />
@@ -102,8 +105,10 @@ const ContactPage = () => {
                     </Typography>
                   </CardContent>
                 </CardActionArea>
+                </a>
               </Card>
               <Card sx={{ minWidth: 310,backgroundColor:"#d3d3d3" }}>
+              <a href="https://maps.app.goo.gl/yLLUhHVaPsN2uVg37" target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none' }}>
                 <CardActionArea>
                   <Box sx={{ display: 'flex', justifyContent: 'center',alignItems: 'center', py: 2 }}>
                     <LocationOnIcon sx={{ fontSize: 40, color: '#6dc396' }} />
@@ -117,6 +122,7 @@ const ContactPage = () => {
                     </Typography>
                   </CardContent>
                 </CardActionArea>
+                </a>
               </Card>
             </Box>
           </Grid>
