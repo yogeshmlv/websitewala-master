@@ -19,7 +19,9 @@ const HomePageContent = () => {
              Who We <span style={{ color: '#6dc396' }}>Are</span>
             </Typography>
             <Typography variant="body1" paragraph>
-              At our core, we are a dedicated team of web designers and developers based in Gorakhpur.
+              Discover top web designers and developers in Peppeganj, Gorakhpur. We specialize in mobile app development,
+              scalable websites, SEO, digital marketing, and e-commerce solutions. Contact us to transform your digital 
+              vision into reality
               Our passion lies in crafting innovative digital solutions that propel businesses forward in the dynamic
               realm of Web3. From creating seamless mobile applications and scalable websites to implementing 
               effective digital marketing strategies and providing reliable website maintenance,

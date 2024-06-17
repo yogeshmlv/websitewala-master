@@ -1,8 +1,8 @@
 // ./src/app/contact/metadata.js
 
 export const metadata = {
-  title: "Top Website and App Development Services in Gorakhpur, Peepalganj, Pipiganj, Uttar Pradesh",
-  description: "Welcome to Gorakhpur Website Wala! We specialize in website development, app development, website maintenance, SEO, digital marketing, marketing consultation, domain hosting, and e-commerce services in Gorakhpur, Peepalganj, Pipiganj, and across Uttar Pradesh.",
+  title: "Leading Web Design & Development Services in Peppeganj, Gorakhpur | Your Digital Solutions Partner",
+  description: "Welcome to Gorakhpur Website Wala! We specialize in website development, app development, website maintenance, SEO, digital marketing, marketing consultation, domain hosting, and e-commerce services in Gorakhpur, Pipiganj, and across Uttar Pradesh.",
   keywords: [
     "Website development in Gorakhpur",
     "App development in Gorakhpur",
@@ -62,6 +62,7 @@ export const metadata = {
     "Website developer",
     "Website design and development",
     "Website developers",
-    "Website design websites"
+    "Website design websites",
+    "Gorakhpur Website Wala",
   ]  
 };
